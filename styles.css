@@ -428,6 +428,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about-section {
+    display: block;
+  }
+  
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
