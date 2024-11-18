@@ -8,6 +8,12 @@ navLinks.forEach(link => {
   });
 });
 
+// Hamburger Menu toggle
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+
 // Slider functionality
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
@@ -41,3 +47,49 @@ dots.forEach((dot, index) => {
 
 // Initialize the first slide
 showSlide(currentSlide);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const gallery = document.querySelector('.gallery-grid');
+  const lightbox = document.querySelector('.lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn = document.querySelector('.close-lightbox');
+  const prevBtn = document.querySelector('.prev-button');
+  const nextBtn = document.querySelector('.next-button');
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.gallery-item img');
+
+  gallery.addEventListener('click', function(e) {
+      const clickedImg = e.target.closest('.gallery-item img');
+      if (!clickedImg) return;
+
+      currentIndex = Array.from(images).indexOf(clickedImg);
+      showImage(currentIndex);
+      lightbox.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', function() {
+      lightbox.classList.remove('active');
+  });
+
+  prevBtn.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+  });
+
+  function showImage(index) {
+      lightboxImg.src = images[index].src;
+      lightboxImg.alt = images[index].alt;
+  }
+
+  // Close lightbox with escape key
+  document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+          lightbox.classList.remove('active');
+      }
+  });
+});

@@ -10,6 +10,7 @@
   <!-- Navbar -->
   <div class="navbar">
     <div class="logo">Khaaz.org</div>
+    <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
     <div class="nav-links">
       <a href="#home" class="nav-item active">Home</a>
       <a href="#about-us" class="nav-item">About Us</a>
@@ -40,14 +41,15 @@
     <img src="https://www.memeraki.com/cdn/shop/files/Kathakali-Face-in-Chhau-Mask-by-Dharmendra-Sutradhar-2_1024x.png?v=1726057219" alt="" width="250" height="250">
     
     <div class="content">
-        <h2>A Few Words About Us</h2>
+      <h2>A Few Words About Us</h2>
         <p>Kerala Hindus of Arizona (KHA) is a non-profit organization dedicated to promoting Kerala's rich heritage, customs, and traditions.
             Through diverse cultural activities, educational programs, social gatherings, and humanitarian efforts, KHA connects the community and encourages the younger generation to appreciate and take pride in their Kerala roots. We invite you to join us and participate in our community outreach activities.</p>
             <a href="#" class="learn-more-btn">Learn More</a>
-        </div>
-    </section>
+        </p>
+    </div>
+  </section>
 
-    <section id="events" class="events-section">
+  <section id="event" class="events-section">
         <h2 class="events-title">Our Events</h2>
         
         <div class="events-grid">
@@ -89,9 +91,53 @@
     <h3 class="event-title">Fund Raising Events</h3>
             </div>
         </div>
-    </section>
+  </section>
 
-    <section id="contact-us" class="contact-us">
+  <section class="gallery-section">
+      <h2 class="gallery-title">Gallery</h2>
+      
+      <div class="gallery-grid">
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image01.jpg" alt="Cultural Performance">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image02.jpg" alt="Group Performance">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image04.jpg" alt="Dance Performance">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image03.jpg" alt="Outdoor Event">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image05.jpg" alt="Community Gathering">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image06.jpg" alt="KHA Event">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image07.jpg" alt="Group Photo">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image08.jpg" alt="Cultural Program">
+          </div>
+          <div class="gallery-item">
+              <img src="https://www.khaaz.org/pix3/image09.jpg" alt="Festival Celebration">
+          </div>
+      </div>
+  
+      <!-- Lightbox -->
+      <div class="lightbox">
+          <button class="close-lightbox">&times;</button>
+          <button class="nav-button prev-button">&lt;</button>
+          <div class="lightbox-content">
+              <img src="" alt="Enlarged gallery image">
+          </div>
+          <button class="nav-button next-button">&gt;</button>
+      </div>
+  </section>
+
+  <section id="contact-us" class="contact-us">
         <div class="contact-container">
           <h2>Contact Us</h2>
           <div class="contact-details">
